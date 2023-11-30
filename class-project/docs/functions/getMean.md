@@ -1,0 +1,2 @@
+# getMean
+::: spectra.Spectra.getMean

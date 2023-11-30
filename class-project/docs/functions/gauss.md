@@ -1,0 +1,2 @@
+# gauss
+::: spectra.Spectra.gauss

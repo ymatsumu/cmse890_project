@@ -1,0 +1,2 @@
+# getFit
+::: spectra.Spectra.getFit

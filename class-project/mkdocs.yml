@@ -1,0 +1,12 @@
+site_name: Find Silicon Absorption Line
+site_url: https://tempurl.com/
+theme: readthedocs
+plugins:
+  - mkdocstrings
+
+nav:
+  - About: index.md
+  - Tutorial: tutorials.md
+  - How-to guides: howto.md
+  - Explanation: explanation.md
+  - Reference: reference.md

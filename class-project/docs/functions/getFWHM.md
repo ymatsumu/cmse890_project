@@ -1,0 +1,2 @@
+# getFWHM
+::: spectra.Spectra.getFWHM

@@ -1,0 +1,2 @@
+# getSpectra
+::: spectra.Spectra.getSpectra
