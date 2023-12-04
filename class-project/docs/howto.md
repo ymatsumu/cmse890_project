@@ -6,7 +6,15 @@
 
 <font size="6">```__init__```</font>
 ::: spectra.Spectra.__init__
-<br><br/>
+<br>
+
+<figure markdown style="text-align:center;">
+  ![Example of how to initiate a Spectra class](example_spectra.png){ width="500" }
+  <figcaption style="width: 500px; margin: 0 auto; text-align: center;"> Example of how to initiate a Spectra class.    
+    Define <code style="background-color: #f2f2f2; padding: 2px 4px; border-radius: 4px;">cutOffLeft</code> and <code style="background-color: #f2f2f2; padding: 2px 4px; border-radius: 4px;">cutOffRight</code> that are suitable for each spectrum. Spectrum can be obtained with <code style="background-color: #f2f2f2; padding: 2px 4px; border-radius: 4px;">getSpectra</code> attribute. The default values are 6020 and 6420.
+  </figcaption>
+</figure>
+
 
 <font size="6">```fit```</font>
 ::: spectra.Spectra.fit
