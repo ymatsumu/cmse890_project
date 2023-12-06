@@ -2,12 +2,16 @@
 
 <font size="6">```changeFileExtensions```</font>
 ::: extension.changeFileExtensions
+<br>
+<figure markdown style="text-align:center;">
+  ![Example of how to change file extensions](example_extension.png){ width="500" }
+  <figcaption style="width: 500px; margin: 0 auto; text-align: center;"> Example of how to use <code style="background-color: #f2f2f2; padding: 2px 4px; border-radius: 4px;">changeFileExtensions</code> function. "Spectrum" is a filder name in which there are spectra files.</figcaption>
+</figure>
 <br><br/>
 
 <font size="6">```__init__```</font>
 ::: spectra.Spectra.__init__
 <br>
-
 <figure markdown style="text-align:center;">
   ![Example of how to initiate a Spectra class](example_spectra.png){ width="500" }
   <figcaption style="width: 500px; margin: 0 auto; text-align: center;"> Example of how to initiate a Spectra class.    
@@ -34,10 +38,17 @@
 
 <font size="6">```getFit```</font>
 ::: spectra.Spectra.getFit
+<br>
+An example output is on [Tutorial](tutorials.md).
 <br><br/>
 
 <font size="6">```getAmplitude```</font>
 ::: spectra.Spectra.getAmplitude
+<br>
+<figure markdown style="text-align:center;">
+  ![Example fit of amplitude](example_amplitude.png){ width="500" }
+  <figcaption>Example of how to use <code style="background-color: #f2f2f2; padding: 2px 4px; border-radius: 4px;">getAmplitude</code> attribute and the output.</figcaption>
+</figure>
 <br><br/>
 
 <font size="6">```getMean```</font>
