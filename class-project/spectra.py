@@ -27,7 +27,9 @@ class Spectra:
         wavelength = df.Wavelength.values
         flux = df.Flux.values
 
-        dfCut = df[(df.Wavelength > self.cutOffLeft) & (df.Wavelength < self.cutOffRight)]
+        dfCut = df[
+            (df.Wavelength > self.cutOffLeft) & (df.Wavelength < self.cutOffRight)
+        ]
         dfCut.columns = header
         wavelengthCut = dfCut.Wavelength.values
         fluxCut = dfCut.Flux.values
@@ -35,7 +37,7 @@ class Spectra:
         return wavelength, flux, wavelengthCut, fluxCut
 
     def getSpectra(self, spectrumPath=None):
-        """This plots the whiole spectrum given by the data.
+        """This plots the whole spectrum given by the data.
 
         Args:
         spectrumPath (str): Specify a path to save the spectrum plot if needed.
@@ -75,7 +77,7 @@ class Spectra:
             plt.show()
 
     def getOffset(self):
-        """This gives the offset of the Gaussian fit from the y axis."""
+        """This gives the offset of the Gaussian fit from the y-axis."""
         _, _, wavelength, flux = self.readData()
         popt, _ = self.fit(wavelength, flux)
         return popt[0]
@@ -129,7 +131,7 @@ class Spectra:
         x (list): Independent variable of the Gaussian function.
         offset (float): Offset of the gaussian function.
         A (float): Amplitude of the gaussian function.
-        mu (flaot): Mean of the x values.
+        mu (float): Mean of the x values.
         sigma (flaot): Standard deviation of the x values.
         """
         return offset + A * np.exp(-((x - mu) ** 2) / (2 * sigma**2))

@@ -5,7 +5,7 @@
 <br>
 <figure markdown style="text-align:center;">
   ![Example of how to change file extensions](example_extension.png){ width="500" }
-  <figcaption style="width: 500px; margin: 0 auto; text-align: center;"> Example of how to use <code style="background-color: #f2f2f2; padding: 2px 4px; border-radius: 4px;">changeFileExtensions</code> function. "Spectrum" is a filder name in which there are spectra files.</figcaption>
+  <figcaption style="width: 500px; margin: 0 auto; text-align: center;"> Example of how to use <code style="background-color: #f2f2f2; padding: 2px 4px; border-radius: 4px;">changeFileExtensions</code> function. "Spectrum" is a folder name in which there are spectra files.</figcaption>
 </figure>
 <br><br/>
 

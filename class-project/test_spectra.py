@@ -4,8 +4,8 @@ import numpy as np
 import os
 
 
-from codeFile.spectra import Spectra
-from codeFile.extension import changeFileExtensions
+from spectra import Spectra
+from extension import changeFileExtensions
 
 
 @pytest.fixture
