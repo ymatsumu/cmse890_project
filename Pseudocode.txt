@@ -1,0 +1,30 @@
+Pseudocode
+
+
+def analyzeFeatures(catalogs):
+    """ Takes in multiple catalog paths and returns a figure. """
+    for path in catalogs:
+        data = standardizeDataFormat(downloadData(path))
+
+    figure = getSpectra(data)  # Analyze the figure 
+    save figure
+
+
+def downloadData(path): 
+    """ Takes in a path and downloads a file. """
+    downloadedFile = download file from path
+    return downloadedfile
+
+
+def standardizeDataFormat(file): 
+    """ Takes in a file in any type and converts to csv. """
+    import csv
+    newFile = convert to csv format
+    return newFile
+
+def getSpectra(data)
+    """ This depends on what data are given """
+   return spectra	
+
+
+
