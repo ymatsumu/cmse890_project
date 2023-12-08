@@ -1,0 +1,2 @@
+# getSigma
+::: spectra.Spectra.getSigma

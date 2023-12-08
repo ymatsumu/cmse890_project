@@ -1,0 +1,2 @@
+# getAmplitude
+::: spectra.Spectra.getAmplitude

@@ -1,0 +1,2 @@
+# changeFileExtensions
+::: extension.changeFileExtensions
