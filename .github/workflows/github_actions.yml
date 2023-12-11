@@ -33,6 +33,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r class-project/requirements.txt
 
+    - name: Install pytest
+      run: |
+        pip install pytest
+
     - name: Run tests
       run: |
         python -m pytest class-project/test_spectra.py
