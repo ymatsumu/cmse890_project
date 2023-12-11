@@ -1,4 +1,5 @@
 site_name: Find Silicon Absorption Line
+docs_dir: docs
 site_url: https://tempurl.com/
 theme: readthedocs
 plugins:
