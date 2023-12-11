@@ -7,6 +7,8 @@ import os
 from spectra import Spectra
 from extension import changeFileExtensions
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 
 @pytest.fixture
 def testFile():
