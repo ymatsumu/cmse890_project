@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tempurl.com/howto/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>How-to guides - Find Silicon Absorption Line</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "How-to guides";
+        var mkdocs_page_input_path = "howto.md";
+        var mkdocs_page_url = "/howto/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Find Silicon Absorption Line
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorial</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">How-to guides</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#extension.changeFileExtensions">changeFileExtensions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#spectra.Spectra.__init__">__init__</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#spectra.Spectra.fit">fit</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#spectra.Spectra.gauss">gauss</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#spectra.Spectra.readData">readData</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#spectra.Spectra.getSpectra">getSpectra</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#spectra.Spectra.getFit">getFit</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#spectra.Spectra.getAmplitude">getAmplitude</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#spectra.Spectra.getMean">getMean</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#spectra.Spectra.getSigma">getSigma</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#spectra.Spectra.getOffset">getOffset</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#spectra.Spectra.getFWHM">getFWHM</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../explanation/">Explanation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../reference/">Reference</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Find Silicon Absorption Line</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">How-to guides</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="how-to-use-the-function-and-class-methods">How to use the function and class methods</h1>
+<p><font size="6"><code>changeFileExtensions</code></font>
+</p>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="extension.changeFileExtensions"></a>
+  <div class="doc doc-contents first">
+  
+      <p>This function renames all files in a folder by changing their extensions to a desired one.</p>
+<p>Args:
+folderPath (str): The path to the folder containing the files to be renamed.
+newFileType (str): The new file extension (including the dot). For example: '.csv'</p>
+
+          <details class="quote">
+            <summary>Source code in <code>extension.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">changeFileExtensions</span><span class="p">(</span><span class="n">folderPath</span><span class="p">,</span> <span class="n">newFileType</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This function renames all files in a folder by changing their extensions to a desired one.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">    folderPath (str): The path to the folder containing the files to be renamed.</span>
+<span class="sd">    newFileType (str): The new file extension (including the dot). For example: &#39;.csv&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">folderPath</span><span class="p">)</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">folder</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="n">fileName</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+        <span class="n">src</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+        <span class="n">dst</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">fileName</span> <span class="o">+</span> <span class="n">newFileType</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div><p><br></p>
+<figure style="text-align:center;">
+<p><img alt="Example of how to change file extensions" src="../example_extension.png" width="500" />
+  </p>
+<figcaption style="width: 500px; margin: 0 auto; text-align: center;"> Example of how to use <code style="background-color: #f2f2f2; padding: 2px 4px; border-radius: 4px;">changeFileExtensions</code> function. "Spectrum" is a folder name in which there are spectra files.</figcaption>
+</figure>
+<p><br><br/></p>
+<p><font size="6"><code>__init__</code></font>
+</p>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="spectra.Spectra.__init__"></a>
+  <div class="doc doc-contents first">
+  
+      <p>This initializes Spectra class.</p>
+<p>Args:
+filePath (str): Path to a csv file.
+cutOffLeft (int): Beginning of a Silicon absorption line. This is the minimum value of the x-axis of the Gaussian fit.
+cutOffRight (int): End of a Silicon absorption line.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>spectra.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filePath</span><span class="p">,</span> <span class="n">cutOffLeft</span><span class="o">=</span><span class="mi">6020</span><span class="p">,</span> <span class="n">cutOffRight</span><span class="o">=</span><span class="mi">6420</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This initializes Spectra class.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">    filePath (str): Path to a csv file.</span>
+<span class="sd">    cutOffLeft (int): Beginning of a Silicon absorption line. This is the minimum value of the x-axis of the Gaussian fit.</span>
+<span class="sd">    cutOffRight (int): End of a Silicon absorption line.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">filePath</span> <span class="o">=</span> <span class="n">filePath</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">cutOffLeft</span> <span class="o">=</span> <span class="n">cutOffLeft</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">cutOffRight</span> <span class="o">=</span> <span class="n">cutOffRight</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div><p><br></p>
+<figure style="text-align:center;">
+<p><img alt="Example of how to initiate a Spectra class" src="../example_spectra.png" width="500" />
+  </p>
+<figcaption style="width: 500px; margin: 0 auto; text-align: center;"> Example of how to initiate a Spectra class.    
+    Define <code style="background-color: #f2f2f2; padding: 2px 4px; border-radius: 4px;">cutOffLeft</code> and <code style="background-color: #f2f2f2; padding: 2px 4px; border-radius: 4px;">cutOffRight</code> that are suitable for each spectrum. Spectrum can be obtained with <code style="background-color: #f2f2f2; padding: 2px 4px; border-radius: 4px;">getSpectra</code> attribute. The default values are 6020 and 6420.
+  </figcaption>
+</figure>
+<p><font size="6"><code>fit</code></font>
+</p>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="spectra.Spectra.fit"></a>
+  <div class="doc doc-contents first">
+  
+      <p>This fits the data with Gaussian function.
+Args:
+xdata (list): Independent variable of the data to fit.
+ydata (list): Dependent variable of the data to fit.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>spectra.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This fits the data with Gaussian function.</span>
+<span class="sd">    Args:</span>
+<span class="sd">    xdata (list): Independent variable of the data to fit.</span>
+<span class="sd">    ydata (list): Dependent variable of the data to fit.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mean</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">xdata</span> <span class="o">*</span> <span class="n">ydata</span><span class="p">)</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="n">ydata</span><span class="p">)</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">ydata</span> <span class="o">*</span> <span class="p">(</span><span class="n">xdata</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="n">ydata</span><span class="p">))</span>
+    <span class="c1"># popt: optimal values for the parameters</span>
+    <span class="c1"># pcov: estimated approximate covariance of popt</span>
+    <span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gauss</span><span class="p">,</span> <span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="p">[</span><span class="nb">min</span><span class="p">(</span><span class="n">ydata</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">ydata</span><span class="p">),</span> <span class="n">mean</span><span class="p">,</span> <span class="n">sigma</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="c1"># perr: one standard deviation errors on the parameters</span>
+    <span class="n">perr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">pcov</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">popt</span><span class="p">,</span> <span class="n">perr</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div><p><br><br/></p>
+<p><font size="6"><code>gauss</code></font>
+</p>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="spectra.Spectra.gauss"></a>
+  <div class="doc doc-contents first">
+  
+      <p>This is a Gaussian function.
+It takes an independent variable as the first argument and the parameters to fit as separate remaining arguments.
+Args:
+x (list): Independent variable of the Gaussian function.
+offset (float): Offset of the gaussian function.
+A (float): Amplitude of the gaussian function.
+mu (float): Mean of the x values.
+sigma (flaot): Standard deviation of the x values.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>spectra.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">gauss</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This is a Gaussian function.</span>
+<span class="sd">    It takes an independent variable as the first argument and the parameters to fit as separate remaining arguments.</span>
+<span class="sd">    Args:</span>
+<span class="sd">    x (list): Independent variable of the Gaussian function.</span>
+<span class="sd">    offset (float): Offset of the gaussian function.</span>
+<span class="sd">    A (float): Amplitude of the gaussian function.</span>
+<span class="sd">    mu (float): Mean of the x values.</span>
+<span class="sd">    sigma (flaot): Standard deviation of the x values.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">offset</span> <span class="o">+</span> <span class="n">A</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div><p><br><br/></p>
+<p><font size="6"><code>readData</code></font>
+</p>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="spectra.Spectra.readData"></a>
+  <div class="doc doc-contents first">
+  
+      <p>This reads a csv file.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>spectra.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">readData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This reads a csv file.&quot;&quot;&quot;</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filePath</span><span class="p">,</span> <span class="n">delim_whitespace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Wavelength&quot;</span><span class="p">,</span> <span class="s2">&quot;Flux&quot;</span><span class="p">]</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">header</span>
+    <span class="n">wavelength</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Wavelength</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">flux</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Flux</span><span class="o">.</span><span class="n">values</span>
+
+    <span class="n">dfCut</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span>
+        <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Wavelength</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">cutOffLeft</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Wavelength</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">cutOffRight</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="n">dfCut</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">header</span>
+    <span class="n">wavelengthCut</span> <span class="o">=</span> <span class="n">dfCut</span><span class="o">.</span><span class="n">Wavelength</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">fluxCut</span> <span class="o">=</span> <span class="n">dfCut</span><span class="o">.</span><span class="n">Flux</span><span class="o">.</span><span class="n">values</span>
+
+    <span class="k">return</span> <span class="n">wavelength</span><span class="p">,</span> <span class="n">flux</span><span class="p">,</span> <span class="n">wavelengthCut</span><span class="p">,</span> <span class="n">fluxCut</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div><p><br><br/></p>
+<p><font size="6"><code>getSpectra</code></font>
+</p>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="spectra.Spectra.getSpectra"></a>
+  <div class="doc doc-contents first">
+  
+      <p>This plots the whole spectrum given by the data.</p>
+<p>Args:
+spectrumPath (str): Specify a path to save the spectrum plot if needed.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>spectra.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">getSpectra</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spectrumPath</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This plots the whole spectrum given by the data.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">    spectrumPath (str): Specify a path to save the spectrum plot if needed.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">wavelength</span><span class="p">,</span> <span class="n">flux</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">readData</span><span class="p">()</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wavelength</span><span class="p">,</span> <span class="n">flux</span><span class="p">,</span> <span class="s2">&quot;k-&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Rest Wavelength ($\AA$)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Scaled $f_\lambda$ + Constant&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">spectrumPath</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">spectrumPath</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div><p><br><br/></p>
+<p><font size="6"><code>getFit</code></font>
+</p>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="spectra.Spectra.getFit"></a>
+  <div class="doc doc-contents first">
+  
+      <p>This plots the spectrum given by the data for wavelengths between cutOffLeft and cutOffRight, as well as the Gaussian fit.</p>
+<p>Args:
+fitPath (str): Specify a path to save the fit and spectrum plot if needed.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>spectra.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">getFit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fitPath</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This plots the spectrum given by the data for wavelengths between cutOffLeft and cutOffRight, as well as the Gaussian fit.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">    fitPath (str): Specify a path to save the fit and spectrum plot if needed.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">wavelengthCut</span><span class="p">,</span> <span class="n">fluxCut</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">readData</span><span class="p">()</span>
+    <span class="n">popt</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">wavelengthCut</span><span class="p">,</span> <span class="n">fluxCut</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wavelengthCut</span><span class="p">,</span> <span class="n">fluxCut</span><span class="p">,</span> <span class="s2">&quot;k-&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Data&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">wavelengthCut</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="n">wavelengthCut</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">),</span> <span class="s2">&quot;r-&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Gaussian fit&quot;</span>
+    <span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Rest Wavelength ($\AA$)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Scaled $f_\lambda$ + Constant&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">fitPath</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">fitPath</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div><p><br>
+An example output is on <a href="../tutorials/">Tutorial</a>.
+<br><br/></p>
+<p><font size="6"><code>getAmplitude</code></font>
+</p>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="spectra.Spectra.getAmplitude"></a>
+  <div class="doc doc-contents first">
+  
+      <p>This gives the amplitude of the Gaussian fit.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>spectra.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">getAmplitude</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This gives the amplitude of the Gaussian fit.&quot;&quot;&quot;</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">wavelength</span><span class="p">,</span> <span class="n">flux</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">readData</span><span class="p">()</span>
+    <span class="n">popt</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">wavelength</span><span class="p">,</span> <span class="n">flux</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">popt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div><p><br></p>
+<figure style="text-align:center;">
+<p><img alt="Example fit of amplitude" src="../example_amplitude.png" width="500" />
+  </p>
+<figcaption>Example of how to use <code style="background-color: #f2f2f2; padding: 2px 4px; border-radius: 4px;">getAmplitude</code> attribute and the output.</figcaption>
+</figure>
+<p><br><br/></p>
+<p><font size="6"><code>getMean</code></font>
+</p>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="spectra.Spectra.getMean"></a>
+  <div class="doc doc-contents first">
+  
+      <p>This gives the mean of the Gaussian fit.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>spectra.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">getMean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This gives the mean of the Gaussian fit.&quot;&quot;&quot;</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">wavelength</span><span class="p">,</span> <span class="n">flux</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">readData</span><span class="p">()</span>
+    <span class="n">popt</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">wavelength</span><span class="p">,</span> <span class="n">flux</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">popt</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div><p><br><br/></p>
+<p><font size="6"><code>getSigma</code></font>
+</p>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="spectra.Spectra.getSigma"></a>
+  <div class="doc doc-contents first">
+  
+      <p>This gives the standard deviation of the Gaussian fit.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>spectra.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">getSigma</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This gives the standard deviation of the Gaussian fit.&quot;&quot;&quot;</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">wavelength</span><span class="p">,</span> <span class="n">flux</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">readData</span><span class="p">()</span>
+    <span class="n">popt</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">wavelength</span><span class="p">,</span> <span class="n">flux</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">popt</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div><p><br><br/></p>
+<p><font size="6"><code>getOffset</code></font>
+</p>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="spectra.Spectra.getOffset"></a>
+  <div class="doc doc-contents first">
+  
+      <p>This gives the offset of the Gaussian fit from the y-axis.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>spectra.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">getOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This gives the offset of the Gaussian fit from the y-axis.&quot;&quot;&quot;</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">wavelength</span><span class="p">,</span> <span class="n">flux</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">readData</span><span class="p">()</span>
+    <span class="n">popt</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">wavelength</span><span class="p">,</span> <span class="n">flux</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div><p><br><br/></p>
+<p><font size="6"><code>getFWHM</code></font>
+</p>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="spectra.Spectra.getFWHM"></a>
+  <div class="doc doc-contents first">
+  
+      <p>This gives the FWHM of the Gaussian fit.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>spectra.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">getFWHM</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This gives the FWHM of the Gaussian fit.&quot;&quot;&quot;</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">wavelength</span><span class="p">,</span> <span class="n">flux</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">readData</span><span class="p">()</span>
+    <span class="n">popt</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">wavelength</span><span class="p">,</span> <span class="n">flux</span><span class="p">)</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="n">popt</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="k">return</span> <span class="mf">2.355</span> <span class="o">*</span> <span class="n">sigma</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div><p><br><br/></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../tutorials/" class="btn btn-neutral float-left" title="Tutorial"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../explanation/" class="btn btn-neutral float-right" title="Explanation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../tutorials/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../explanation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../javascripts/mathjax.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
