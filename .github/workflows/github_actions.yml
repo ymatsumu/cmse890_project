@@ -50,8 +50,7 @@ jobs:
         pip install mkdocs mkdocs-material
         cd class-project
         mkdocs build
-        # Replace `gh-pages` with your branch name if different
-        mkdocs gh-deploy --force
+        mkdocs gh-deploy --force --config-file ../mkdocs.yml
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
