@@ -1,6 +1,6 @@
 site_name: Find Silicon Absorption Line
 docs_dir: docs
-site_url: https://tempurl.com/
+site_url: https://ymatsumu.github.io/cmse890_project/
 theme: readthedocs
 plugins:
   - mkdocstrings
