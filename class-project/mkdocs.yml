@@ -17,8 +17,8 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - About: index.md
-  - Tutorial: tutorials.md
-  - How-to guides: howto.md
-  - Explanation: explanation.md
-  - Reference: reference.md
+  - About: docs/index.md
+  - Tutorial: docs/tutorials.md
+  - How-to guides: docs/howto.md
+  - Explanation: docs/explanation.md
+  - Reference: docs/reference.md
