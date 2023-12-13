@@ -4,8 +4,8 @@ import numpy as np
 import os
 
 
-from spectra import Spectra
-from extension import changeFileExtensions
+from project.extension import changeFileExtensions
+from project.spectra import Spectra
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
