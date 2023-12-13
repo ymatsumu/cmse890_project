@@ -31,7 +31,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r class-project/requirements.txt
+        pip install -r project/requirements.txt
 
     - name: Install pytest
       run: |
@@ -39,7 +39,7 @@ jobs:
 
     - name: Run tests
       run: |
-        python -m pytest class-project/test_spectra.py
+        python -m pytest project/test_spectra.py
 
     - name: Set job status
       run: echo "🍏 This job's status is ${{ job.status }}."
@@ -48,12 +48,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install mkdocs mkdocs-material
-        cd class-project
+        cd project
         mkdocs build
         mkdocs gh-deploy --force
-
-    # - name: Deploy to GitHub Pages
-    #   uses: peaceiris/actions-gh-pages@v3
-    #   with:
-    #     personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-    #     publish_dir: class-project
